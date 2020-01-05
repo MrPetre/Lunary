@@ -1,3 +1,4 @@
 module.exports = {
-  MongoURI: "Insert Your Own MongoURI here"
+  MongoURI:
+    "mongodb+srv://MrPetre:@Cheater101@cluster0-odgk8.mongodb.net/test?retryWrites=true&w=majority"
 };
