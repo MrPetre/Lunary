@@ -1,15 +1,21 @@
 <%- include('./partials/messages.ejs'); %>
-<h1>Login</h1>
-<form action="/users/login" method="POST">
-  <div>
-    <label for="email">E-mail</label>
-    <input type="email" id="email" name="email" required />
+<div class="wrapper">
+  <div class="form-box">
+    <h1 class="lunary-logo">Login</h1>
+    <form class="sign-up-log-in-form" action="/users/login" method="POST">
+      <div>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <button tpe="submit">Login</button>
+    </form>
+    <div class="login-page-btn-wrapper">
+      <a class="log-button" href="/users/register">Register</a>
+      <a class="log-button" href="/">Back to main page</a>
+    </div>
   </div>
-  <div>
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" required />
-  </div>
-  <button tpe="submit">Login</button>
-</form>
-<a href="/users/register">Register</a>
-<a href="/">Back to main page</a>
+</div>

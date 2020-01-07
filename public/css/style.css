@@ -3,7 +3,7 @@
 @import url("/css/globals/_global_classes.css");
 
 /* Banner area on main page */
-.banner-wrapper {
+.wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,7 +13,7 @@
     background-color: #e5a124;
 }
 
-.banner {
+.banner, .form-box {
     align-self: center;
     justify-content: center;
 }
@@ -34,7 +34,7 @@
     line-height: 1em;
 }
 
-.sign-in-wrapper {
+.log-buttons-wrapper {
     display: flex;
     width: 50%;
     margin: 5px auto;
@@ -53,12 +53,7 @@
     transition: color 0.5s ease, background-color 0.5s ease;
 }
 
-.log-button:nth-of-type(1) {
-    padding: 10px 30px;
-    box-sizing: border-box;
-}
-
-.log-button:nth-of-type(2) {
+.log-button:nth-of-type(1), .log-button:nth-of-type(2) {
     padding: 10px 30px;
     box-sizing: border-box;
 }
@@ -69,5 +64,18 @@
 }
 
 /* Login page */
+.sign-up-log-in-form {
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat";
+    align-items: center;
+    justify-content: center;
+}
+
+.login-page-btn-wrapper {
+    display: flex;
+    width: 100%;
+    margin: 5px auto;
+}
 
 /* Register page */
