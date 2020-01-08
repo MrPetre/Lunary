@@ -1,4 +1,5 @@
 /* Imports */
+@import url("/css/globals/_reset.css");
 @import url("/css/globals/_fonts.css");
 @import url("/css/globals/_global_classes.css");
 
@@ -40,7 +41,7 @@
     margin: 5px auto;
 }
 
-.log-button {
+.log-button, .profile-btn {
     font-size: 1.8rem;
     outline: none;
     text-decoration: none;
@@ -53,12 +54,12 @@
     transition: color 0.5s ease, background-color 0.5s ease;
 }
 
-.log-button:nth-of-type(1), .log-button:nth-of-type(2) {
+.log-button:nth-of-type(1), .log-button:nth-of-type(2), .profile-btn {
     padding: 10px 30px;
     box-sizing: border-box;
 }
 
-.log-button:hover {
+.log-button:hover, .sign-up-log-in-form button:hover, .profile-btn:hover {
     color: #e5a124;
     background-color: #141f23;
 }
@@ -74,8 +75,63 @@
 
 .login-page-btn-wrapper {
     display: flex;
-    width: 100%;
-    margin: 5px auto;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
-/* Register page */
+.font-size-delete {
+    font-size: 1rem;
+}
+
+.btn-margin {
+    margin-top: 8px;
+}
+
+.sign-up-log-in-form input[type="email"], .sign-up-log-in-form input[type="password"], .sign-up-log-in-form input[type="text"] {
+    border: 0;
+    background: none !important;
+    background-color: none !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0), inset 0 0 0 100px #e5a124;
+    display: block;
+    margin: 8px auto;
+    text-align: center;
+    border: 2px solid #141f23;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #141f23;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.sign-up-log-in-form input[type="email"]:focus, .sign-up-log-in-form input[type="password"]:focus, .sign-up-log-in-form input[type="text"]:focus {
+    width: 280px;
+}
+
+input[type="email"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, input[type="text"]::-webkit-input-placeholder {
+    color: #141f23;
+}
+
+.sign-up-log-in-form button {
+    border: 0;
+    background: none;
+    background-color: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid #141f23;
+    padding: 10px;
+    width: 100px;
+    outline: none;
+    color: #141f23;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+/* Welcome screen */
+.welcome-text, .profile-btn {
+    font-family: "Montserrat";
+    font-size: 1.5rem;
+    margin: 20px 0;
+}

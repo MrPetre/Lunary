@@ -1,23 +1,45 @@
-<%- include('./partials/messages.ejs'); %>
-<h1>Register</h1>
-<form action="/users/register" method="POST">
-  <div>
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required />
+<div class="wrapper">
+  <div class="form-box">
+    <h1 class="lunary-logo">Register</h1>
+    <form class="sign-up-log-in-form" action="/users/register" method="POST">
+      <%- include('./partials/messages.ejs'); %>
+      <input
+        placeholder="Enter your name"
+        type="text"
+        id="name"
+        name="name"
+        required
+      />
+      <input
+        placeholder="Enter your E-mail"
+        type="email"
+        id="email"
+        name="email"
+        required
+      />
+      <input
+        placeholder="Create a password"
+        type="password"
+        id="password"
+        name="password"
+        required
+      />
+      <input
+        placeholder="Confirm password"
+        type="password"
+        id="password2"
+        name="password2"
+        required
+      />
+      <button tpe="submit">Register</button>
+    </form>
+    <div class="login-page-btn-wrapper">
+      <a class="log-button font-size-delete btn-margin" href="/users/login"
+        >Login</a
+      >
+      <a class="log-button font-size-delete btn-margin" href="/"
+        >Back to main page</a
+      >
+    </div>
   </div>
-  <div>
-    <label for="email">E-mail</label>
-    <input type="email" id="email" name="email" required />
-  </div>
-  <div>
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" required />
-  </div>
-  <div>
-    <label for="password2">Confirm password</label>
-    <input type="password" id="password2" name="password2" required />
-  </div>
-  <button tpe="submit">Register</button>
-</form>
-<a href="/users/login">Login</a>
-<a href="/">Back to main page</a>
+</div>

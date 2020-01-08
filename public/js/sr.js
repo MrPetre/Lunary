@@ -17,3 +17,9 @@ ScrollReveal().reveal("#right-button", {
   delay: 600,
   origin: "right"
 });
+
+ScrollReveal().reveal(".profile-btn", {
+  ...defaultProps,
+  delay: 700,
+  origin: "bottom"
+});
