@@ -1,3 +1,4 @@
+// My default settings for scroll reveal
 const defaultProps = {
   easing: "cubic-bezier(0.5, 0, 0, 1)",
   distance: "15px",
@@ -5,6 +6,8 @@ const defaultProps = {
   desktop: true,
   mobile: true
 };
+
+// =========== Banner area ============
 
 ScrollReveal().reveal("#left-button", {
   ...defaultProps,
@@ -23,3 +26,5 @@ ScrollReveal().reveal(".profile-btn", {
   delay: 700,
   origin: "bottom"
 });
+
+// =========== End banner area ============
