@@ -7,24 +7,18 @@ const defaultProps = {
   mobile: true
 };
 
-// =========== Banner area ============
+// =========== Login area ============
 
-ScrollReveal().reveal("#left-button", {
+ScrollReveal().reveal(".avatar", {
   ...defaultProps,
   delay: 600,
+  origin: "top"
+});
+
+ScrollReveal().reveal(".img", {
+  ...defaultProps,
+  delay: 400,
   origin: "left"
 });
 
-ScrollReveal().reveal("#right-button", {
-  ...defaultProps,
-  delay: 600,
-  origin: "right"
-});
-
-ScrollReveal().reveal(".profile-btn", {
-  ...defaultProps,
-  delay: 700,
-  origin: "bottom"
-});
-
-// =========== End banner area ============
+// =========== Login area ============

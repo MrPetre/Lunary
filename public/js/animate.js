@@ -1,12 +1,12 @@
 //Logo animation
-let textWrapper = document.querySelector(".lunary-logo");
+let textWrapper = document.querySelector(".mls");
 textWrapper.innerHTML = textWrapper.textContent.replace(
   /\S/g,
   "<span class='letter'>$&</span>"
 );
 
 anime.timeline({ loop: false }).add({
-  targets: ".lunary-logo .letter",
+  targets: ".mls .letter",
   scale: [4, 1],
   opacity: [0, 1],
   translateZ: 0,

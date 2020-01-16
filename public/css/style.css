@@ -3,135 +3,241 @@
 @import url("/css/globals/_fonts.css");
 @import url("/css/globals/_global_classes.css");
 
-/* Banner area on main page */
-.wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    flex-direction: column;
-    background-color: #e5a124;
-}
-
-.banner, .form-box {
-    align-self: center;
-    justify-content: center;
-}
-
-.lunary-logo {
-    font-size: 10rem;
+/* Login/register page code */
+* {
+    padding: 0;
     margin: 0;
-    font-family: "Montserrat Light";
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1.2rem;
-    cursor: default;
-    color: #141f23;
-}
-
-.lunary-logo .letter {
-    display: inline-block;
-    line-height: 1em;
-}
-
-.log-buttons-wrapper {
-    display: flex;
-    width: 50%;
-    margin: 5px auto;
-}
-
-.log-button, .profile-btn {
-    font-size: 1.8rem;
-    outline: none;
-    text-decoration: none;
-    color: #141f23;
-    font-family: "Montserrat";
-    border: 2px solid #141f23;
-    border-radius: 30px;
-    text-align: center;
-    margin: auto;
-    transition: color 0.5s ease, background-color 0.5s ease;
-}
-
-.log-button:nth-of-type(1), .log-button:nth-of-type(2), .profile-btn {
-    padding: 10px 30px;
     box-sizing: border-box;
 }
 
-.log-button:hover, .sign-up-log-in-form button:hover, .profile-btn:hover {
-    color: #e5a124;
-    background-color: #141f23;
-}
-
-/* Login page */
-.sign-up-log-in-form {
-    display: flex;
-    flex-direction: column;
+body {
     font-family: "Montserrat";
-    align-items: center;
-    justify-content: center;
 }
 
-.login-page-btn-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+.wave {
+    position: fixed;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
-.font-size-delete {
-    font-size: 1rem;
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 7rem;
+    padding: 0 2rem;
 }
 
-.btn-margin {
-    margin-top: 8px;
+.img img {
+    width: 500px;
+    margin-right: 35%;
 }
 
-.sign-up-log-in-form input[type="email"], .sign-up-log-in-form input[type="password"], .sign-up-log-in-form input[type="text"] {
-    border: 0;
-    background: none !important;
-    background-color: none !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0), inset 0 0 0 100px #e5a124;
-    display: block;
-    margin: 8px auto;
-    text-align: center;
-    border: 2px solid #141f23;
-    padding: 14px 10px;
-    width: 200px;
-    outline: none;
-    color: #141f23;
-    border-radius: 24px;
-    transition: 0.25s;
-}
-
-.sign-up-log-in-form input[type="email"]:focus, .sign-up-log-in-form input[type="password"]:focus, .sign-up-log-in-form input[type="text"]:focus {
-    width: 280px;
-}
-
-input[type="email"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, input[type="text"]::-webkit-input-placeholder {
-    color: #141f23;
-}
-
-.sign-up-log-in-form button {
-    border: 0;
-    background: none;
-    background-color: none;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    border: 2px solid #141f23;
-    padding: 10px;
+.avatar {
     width: 100px;
-    outline: none;
-    color: #141f23;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer;
 }
 
-/* Welcome screen */
-.welcome-text, .profile-btn {
+.img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+form {
+    width: 360px;
+}
+
+form h2 {
+    font-size: 2.9rem;
+    text-transform: uppercase;
+    margin: 15px 0;
+    color: #333;
+}
+
+.input-div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.input-div::after, .input-div::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #38d39f;
+    transition: 0.3s;
+}
+
+input-div::before {
+    left: 100%;
+}
+
+.input-div.focus::after, .input-div.focus::before {
+    width: 100%;
+}
+
+.input-div.focus .i i {
+    color: #38d39f;
+}
+
+.input-div.focus div h5 {
+    top: -5px;
+    font-size: 15px;
+}
+
+.input-div.one {
+    margin-top: 0;
+}
+
+.input-div.two {
+    margin-bottom: 4px;
+}
+
+.i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i i {
+    color: #d9d9d9;
+    transition: 0.3s;
+}
+
+.input-div > div {
+    position: relative;
+    height: 45px;
+}
+
+.input-div > div h5 {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    background: none;
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
     font-family: "Montserrat";
-    font-size: 1.5rem;
-    margin: 20px 0;
+    color: #555;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #999;
+    transition: 0.3s;
+    outline: none;
+    border: none;
+}
+
+a:hover {
+    color: #38d39f;
+}
+
+button {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    margin: 1rem 0;
+    background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+    color: #fff;
+    font-family: "Montserrat";
+    font-weight: bold;
+    background-size: 200%;
+    transition: 0.5s;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+}
+
+button:hover {
+    background-position: right;
+}
+
+/* Responsive code */
+@media screen and (max-width: 1400px) {
+    .img img {
+        margin-right: 15%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .wave {
+        transform: translateX(-40%);
+    }
+    
+    .img img {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .container {
+        grid-gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    form {
+        width: 290px;
+    }
+
+    form h2 {
+        font-size: 2.4rem;
+        margin: 8px 0;
+    }
+
+    .img img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .img {
+        display: none;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .wave {
+        display: none;
+    }
+
+    .login-container {
+        justify-content: center;
+    }
 }

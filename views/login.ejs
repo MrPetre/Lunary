@@ -1,36 +1,58 @@
-<div class="wrapper">
-  <div class="form-box">
-    <h1 class="lunary-logo">Login</h1>
-    <form
-      autocomplete="off"
-      class="sign-up-log-in-form"
-      action="/users/login"
-      method="POST"
-    >
+<img src="/img/wave.png" alt="Wave wallpaper" class="wave" />
+<div class="container">
+  <div class="img">
+    <img src="/img/undraw_researching_22gp.svg" alt="Svg over wallpaper" />
+  </div>
+  <div class="login-container">
+    <form autocomplete="off" action="/users/login" method="POST">
+      <img
+        class="avatar"
+        src="/img/undraw_male_avatar_323b.svg"
+        alt="Login svg"
+      />
+      <h2 class="mls">
+        <span class="letter">W</span><span class="letter">e</span
+        ><span class="letter">l</span><span class="letter">c</span
+        ><span class="letter">o</span><span class="letter">m</span
+        ><span class="letter">e</span>
+      </h2>
       <%- include('./partials/messages.ejs'); %>
-      <input
-        placeholder="E-mail"
-        type="email"
-        id="email"
-        name="email"
-        required
-      />
-      <input
-        placeholder="Password"
-        type="password"
-        id="password"
-        name="password"
-        required
-      />
+      <div class="input-div one">
+        <div class="i">
+          <i class="fa fa-user"></i>
+        </div>
+        <div>
+          <h5>Username</h5>
+          <input
+            readonly
+            onfocus="this.removeAttribute('readonly');"
+            class="input"
+            type="email"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+      </div>
+      <div class="input-div two">
+        <div class="i">
+          <i class="fa fa-user"></i>
+        </div>
+        <div>
+          <h5>Password</h5>
+          <input
+            readonly
+            onfocus="this.removeAttribute('readonly');"
+            class="input"
+            type="password"
+            id="password"
+            name="password"
+            required
+          />
+        </div>
+      </div>
+      <a href="#">Forgot Password?</a>
       <button type="submit">Login</button>
     </form>
-    <div class="login-page-btn-wrapper">
-      <a class="log-button font-size-delete btn-margin" href="/users/register"
-        >Register</a
-      >
-      <a class="log-button font-size-delete btn-margin" href="/"
-        >Back to main page</a
-      >
-    </div>
   </div>
 </div>
