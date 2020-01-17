@@ -162,8 +162,9 @@ a {
     font-size: 0.9rem;
     color: #999;
     transition: 0.3s;
-    outline: none;
+    outline: none !important;
     border: none;
+    margin-top: 10px;
 }
 
 a:hover {
@@ -191,10 +192,16 @@ button:hover {
     background-position: right;
 }
 
+/* End login/register page code */
+
 /* Responsive code */
 @media screen and (max-width: 1400px) {
     .img img {
         margin-right: 15%;
+    }
+
+    .wave {
+        transform: translateX(-30%);
     }
 }
 
@@ -202,7 +209,7 @@ button:hover {
     .wave {
         transform: translateX(-40%);
     }
-    
+
     .img img {
         margin-right: 0;
     }
@@ -246,3 +253,5 @@ button:hover {
         justify-content: center;
     }
 }
+
+/* End responsive code */

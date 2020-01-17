@@ -2,6 +2,14 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   const inputs = document.querySelectorAll(".input");
 
+  focusMethodEmail = function getFocusEmail() {
+    document.getElementById("email").focus();
+  };
+
+  focusMethodPassword = function getFocusPassword() {
+    document.getElementById("password").focus();
+  };
+
   function focusFunc() {
     let parent = this.parentNode.parentNode;
     parent.classList.add("focus");
