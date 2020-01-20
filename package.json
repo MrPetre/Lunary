@@ -25,7 +25,8 @@
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.0.1",
     "path": "^0.12.7",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "swup": "^2.0.8"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",

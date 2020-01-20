@@ -2,12 +2,20 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   const inputs = document.querySelectorAll(".input");
 
+  focusMethodName = function getFocusName() {
+    document.getElementById("name").focus();
+  };
+
   focusMethodEmail = function getFocusEmail() {
     document.getElementById("email").focus();
   };
 
   focusMethodPassword = function getFocusPassword() {
     document.getElementById("password").focus();
+  };
+
+  focusMethodPassword2 = function getFocusPassword2() {
+    document.getElementById("password2").focus();
   };
 
   function focusFunc() {

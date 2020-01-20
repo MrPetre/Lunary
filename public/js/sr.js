@@ -7,7 +7,7 @@ const defaultProps = {
   mobile: true
 };
 
-// =========== Login area ============
+// =========== Login/Register area ============
 
 ScrollReveal().reveal(".avatar", {
   ...defaultProps,
@@ -21,4 +21,4 @@ ScrollReveal().reveal(".img", {
   origin: "left"
 });
 
-// =========== Login area ============
+// =========== Login/Register area end ============

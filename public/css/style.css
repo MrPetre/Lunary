@@ -108,7 +108,7 @@ input-div::before {
     margin-top: 0;
 }
 
-.input-div.two {
+.input-div.two.login, .input-div.four {
     margin-bottom: 4px;
 }
 

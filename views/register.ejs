@@ -1,32 +1,94 @@
-<form class="sign-up-log-in-form" action="/users/register" method="POST">
-  <%- include('./partials/messages.ejs'); %>
-  <input
-    placeholder="Enter your name"
-    type="text"
-    id="name"
-    name="name"
-    required
-  />
-  <input
-    placeholder="Enter your E-mail"
-    type="email"
-    id="email"
-    name="email"
-    required
-  />
-  <input
-    placeholder="Create a password"
-    type="password"
-    id="password"
-    name="password"
-    required
-  />
-  <input
-    placeholder="Confirm password"
-    type="password"
-    id="password2"
-    name="password2"
-    required
-  />
-  <button tpe="submit">Register</button>
-</form>
+<img src="/img/wave.png" alt="Wave wallpaper" class="wave" />
+<div class="container">
+  <div class="img">
+    <img src="/img/undraw_researching_22gp.svg" alt="Svg over wallpaper" />
+  </div>
+  <div class="login-container">
+    <form autocomplete="off" action="/users/register" method="POST">
+      <img
+        class="avatar"
+        src="/img/undraw_male_avatar_323b.svg"
+        alt="Login svg"
+      />
+      <h2 class="mls">
+        <span class="letter">W</span><span class="letter">e</span
+        ><span class="letter">l</span><span class="letter">c</span
+        ><span class="letter">o</span><span class="letter">m</span
+        ><span class="letter">e</span>
+      </h2>
+      <div class="error-text"><%- include('./partials/messages.ejs'); %></div>
+      <div class="input-div one">
+        <div class="i">
+          <i class="fa fa-user"></i>
+        </div>
+        <div>
+          <h5 onclick="focusMethodName()">Name</h5>
+          <input
+            readonly
+            onfocus="this.removeAttribute('readonly');"
+            class="input"
+            type="text"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+      </div>
+      <div class="input-div two">
+        <div class="i">
+          <i class="fa fa-user"></i>
+        </div>
+        <div>
+          <h5 onclick="focusMethodEmail()">Username</h5>
+          <input
+            readonly
+            onfocus="this.removeAttribute('readonly');"
+            class="input"
+            type="email"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+      </div>
+      <div class="input-div three">
+        <div class="i">
+          <i class="fa fa-user"></i>
+        </div>
+        <div>
+          <h5 onclick="focusMethodPassword()">Password</h5>
+          <input
+            readonly
+            onfocus="this.removeAttribute('readonly');"
+            class="input"
+            type="password"
+            id="password"
+            name="password"
+            required
+          />
+        </div>
+      </div>
+      <div class="input-div four">
+        <div class="i">
+          <i class="fa fa-user"></i>
+        </div>
+        <div>
+          <h5 onclick="focusMethodPassword2()">Confirm password</h5>
+          <input
+            readonly
+            onfocus="this.removeAttribute('readonly');"
+            class="input"
+            type="password"
+            id="password2"
+            name="password2"
+            required
+          />
+        </div>
+      </div>
+      <button type="submit">Register</button>
+      <button onclick="location.href='/users/login'" type="button">
+        Back to login page
+      </button>
+    </form>
+  </div>
+</div>
