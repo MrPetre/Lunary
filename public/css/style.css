@@ -57,11 +57,11 @@ body {
     text-align: center;
 }
 
-form {
+.form-log {
     width: 360px;
 }
 
-form h2 {
+.form-log h2 {
     font-size: 2.9rem;
     text-transform: uppercase;
     margin: 15px 0;
@@ -155,7 +155,7 @@ input-div::before {
     color: #555;
 }
 
-a {
+.form-a {
     display: block;
     text-decoration: none;
     text-align: right;
@@ -167,11 +167,11 @@ a {
     margin-top: 10px;
 }
 
-a:hover {
+.form-a:hover {
     color: #6c5ce7;
 }
 
-button {
+.form-button {
     display: block;
     width: 100%;
     height: 50px;
@@ -188,7 +188,7 @@ button {
     border: none;
 }
 
-button:hover {
+.form-button:hover {
     background-position: right;
 }
 
@@ -222,11 +222,11 @@ button:hover {
 }
 
 @media screen and (max-width: 1000px) {
-    form {
+    .form-log {
         width: 290px;
     }
 
-    form h2 {
+    .form-log h2 {
         font-size: 2.4rem;
         margin: 8px 0;
     }
@@ -251,6 +251,16 @@ button:hover {
 
     .login-container {
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .form-log {
+        width: 250px;
+    }
+
+    .avatar {
+        display: none;
     }
 }
 

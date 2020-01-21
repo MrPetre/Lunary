@@ -4,7 +4,12 @@
     <img src="/img/undraw_researching_22gp.svg" alt="Svg over wallpaper" />
   </div>
   <div class="login-container">
-    <form autocomplete="off" action="/users/login" method="POST">
+    <form
+      class="form-log"
+      autocomplete="off"
+      action="/users/login"
+      method="POST"
+    >
       <img
         class="avatar"
         src="/img/undraw_male_avatar_323b.svg"
@@ -51,9 +56,14 @@
           />
         </div>
       </div>
-      <a href="#">Forgot Password?</a>
-      <button type="submit">Login</button>
-      <button onclick="location.href='/users/register'" type="button">
+      <a class="form-a" href="#">Forgot Password?</a>
+      <button button class="form-button" type="submit">Login</button>
+      <button
+        button
+        class="form-button"
+        onclick="location.href='/users/register'"
+        type="button"
+      >
         Register
       </button>
     </form>

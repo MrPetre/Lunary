@@ -1,20 +1,25 @@
 <img src="/img/wave.png" alt="Wave wallpaper" class="wave" />
 <div class="container">
   <div class="img">
-    <img src="/img/undraw_researching_22gp.svg" alt="Svg over wallpaper" />
+    <img src="/img/undraw_annotation_7das.svg" alt="Svg over wallpaper" />
   </div>
   <div class="login-container">
-    <form autocomplete="off" action="/users/register" method="POST">
+    <form
+      class="form-log"
+      autocomplete="off"
+      action="/users/register"
+      method="POST"
+    >
       <img
         class="avatar"
         src="/img/undraw_male_avatar_323b.svg"
         alt="Login svg"
       />
       <h2 class="mls">
-        <span class="letter">W</span><span class="letter">e</span
-        ><span class="letter">l</span><span class="letter">c</span
-        ><span class="letter">o</span><span class="letter">m</span
-        ><span class="letter">e</span>
+        <span class="letter">R</span><span class="letter">e</span
+        ><span class="letter">g</span><span class="letter">i</span
+        ><span class="letter">s</span><span class="letter">t</span
+        ><span class="letter">e</span><span class="letter">r</span>
       </h2>
       <div class="error-text"><%- include('./partials/messages.ejs'); %></div>
       <div class="input-div one">
@@ -85,8 +90,13 @@
           />
         </div>
       </div>
-      <button type="submit">Register</button>
-      <button onclick="location.href='/users/login'" type="button">
+      <button class="form-button" type="submit">Register</button>
+      <button
+        button
+        class="form-button"
+        onclick="location.href='/users/login'"
+        type="button"
+      >
         Back to login page
       </button>
     </form>
