@@ -17,7 +17,13 @@ ScrollReveal().reveal(".avatar", {
 
 ScrollReveal().reveal(".img", {
   ...defaultProps,
-  delay: 400,
+  delay: 600,
+  origin: "left"
+});
+
+ScrollReveal().reveal(".wave", {
+  ...defaultProps,
+  delay: 100,
   origin: "left"
 });
 
